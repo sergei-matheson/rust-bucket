@@ -1,8 +1,8 @@
 fn main() {
-  do 100.times {
+  for num in range(0, 100) {
     do spawn {
-      let greeting_message = "Hello?";
-      println(greeting_message);
+      println!("Hello to {}", num);
+      println!("Hello again to {}", num);
     }
   }
 }
