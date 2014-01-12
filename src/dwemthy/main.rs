@@ -1,7 +1,10 @@
-struct Monster {
-  name: ~str,
-  health: int,
-  attack: int,
+trait Monster {
+  fn attack(&self) {
+    println!("{name} attacks for {damage:d} damage!", name = self.name(), damage = self.attack())
+  }
+  fn name(&self);
+  fn health(&self);
+  fn attack(&self);
 }
 
 impl Monster {
